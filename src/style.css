@@ -1,0 +1,54 @@
+html,body{
+    font-family: 'Lato', sans-serif;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    background-size:;
+  
+  }
+#welcome{
+    display:flex;
+    position: relative;
+    width: 1442px;
+    height: 542px;
+    left: -12px;
+    top: 0px;
+}
+#buy{
+    width: 260px;
+    height: 60px;
+    top: 730px;
+    margin-left: 1080px;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 13px;
+    border: 13px red;
+    font-size: 35px;
+}
+#main,p{
+    font-size: 22px;
+    color: rgba(203, 206, 15, 0.904);
+}
+#welcome3{
+    margin-left: 800px;
+    margin-top: -800px;
+    margin-right: 400px;
+    width: 100px;
+    height: 490px;
+}
+#screen2{
+    font-size: 22px;
+    color: rgb(255, 38, 0);
+    display:none;
+}
+
+#tarjetas{
+    width: 250px;
+    height: 70px;
+}
+
+.credit-card-error{
+    border-color: #CC0000;
+}
