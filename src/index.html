@@ -6,86 +6,87 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <section id="screen1">
+    <main>
+        <section id="screen1">
     
-      
-            <p>
-                5 de Julio 2022 <br/>
-               8:00pm<br>
-              Arena 1 Costa verde San Miguel <br>
-            </p> 
-        <figure>
-            <div id="welcome">
-             <img src="./img/bienvenida.png" alt = "Es una imagen de Bienvenida Bichota Tour">
+            <figure>
+                <div id="welcome">
+                    <img src="./img/bienvenida.png" alt="Es una imagen de Bienvenida Bichota Tour">
+                </div>
+                <div id="welcome2">
+                    <button id="buy" type="submit">Comprar Entrada</button>
+                </div>
+            </figure>
+            <section id="datos">
+                <p class="tour">
+                    5 de Julio 2022 <br>
+                    8:00pm<br>
+                    Arena 1 Costa verde San Miguel <br>
+                </p>
+            </section>
+        </section>
+    <div id="card">
+        <section id="screen2" class="ocultar">
+            <div class="creditCardForm">
+                <div class="heading">
+                    <h1>Confirmar Compra</h1>
+                </div>
+                <div class="payment">
+                    <form id="dates">
+                        <div class="form-group names">
+                            <label for="Nombres">Nombres y Apellidos</label>
+                            <input type="text" class="form-control" id="nombres">
+                        </div>
+                        <div class="form-group CVV">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv">
+                        </div>
+                        <div class="form-group" id="card-number-field">
+                            <label for="cardNumber">Número de Tarjeta</label>
+                            <input type="text" class="form-control" id="cardNumber">
+                        </div>
+                        <div class="form-group" id="expiration-date">
+                            <label>Fecha de Expiración</label>
+                            <select>
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero </option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Setiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <select>
+                                <option value="16"> 2023</option>
+                                <option value="17"> 2024</option>
+                                <option value="18"> 2025</option>
+                                <option value="19"> 2026</option>
+                                <option value="20"> 2027</option>
+                                <option value="21"> 2028</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="credit_cards">
+                            <img src="./img/kisspng-mastercard-payment-visa-credit-card-emv-credit-card-visa-and-master-card-transparent-backg-5a77bb4a42a195.9274531015177961702729.jpg"
+                                alt="tarjetas" id="tarjetas">
+    
+                        </div>
+                        <div class="form-group" id="pay-now">
+                            <button type="submit" class="btn btn-default" id="confirm-purchase">Valida</button>
+                        </div>
+                        <div class="form-group" id="clear">
+                            <button type="submit" class="clear" id="clear-limpiar">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div id="welcome2">
-             <button id="buy" type="submit">Comprar Entrada</button>
-            </div>
-            <div id="welcome3">
-             <img src="./img/274cb32832cb2c34e6a3345d4503fccd.jpg" alt = "Es una imagen de rayos">
-            </div>
-        </figure>
-      </section>
-      <section id ="screen2">
-      <div class="creditCardForm">
-        <div class="heading">
-            <h1>Confirmar Compra</h1>
-        </div>
-        <div class="payment">
-            <form id="dates">
-                <div class="form-group names">
-                    <label for="Nombres">Nombres y Apellidos</label>
-                    <input type="text" class="form-control" id="nombres">
-                </div>
-                <div class="form-group CVV">
-                    <label for="cvv">CVV</label>
-                    <input type="text" class="form-control" id="cvv">
-                </div>
-                <div class="form-group" id="card-number-field">
-                    <label for="cardNumber">Número de Tarjeta</label>
-                    <input type="text" class="form-control" id="cardNumber">
-                </div>
-                <div class="form-group" id="expiration-date">
-                    <label>Fecha de Expiración</label>
-                    <select>
-                        <option value="01">Enero</option>
-                        <option value="02">Febrero </option>
-                        <option value="03">Marzo</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Mayo</option>
-                        <option value="06">Junio</option>
-                        <option value="07">Julio</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Setiembre</option>
-                        <option value="10">Octubre</option>
-                        <option value="11">Noviembre</option>
-                        <option value="12">Diciembre</option>
-                    </select>
-                    <select>
-                        <option value="16"> 2023</option>
-                        <option value="17"> 2024</option>
-                        <option value="18"> 2025</option>
-                        <option value="19"> 2026</option>
-                        <option value="20"> 2027</option>
-                        <option value="21"> 2028</option>
-                    </select>
-                </div>
-                <div class="form-group" id="credit_cards">
-                    <img src="./img/kisspng-mastercard-payment-visa-credit-card-emv-credit-card-visa-and-master-card-transparent-backg-5a77bb4a42a195.9274531015177961702729.jpg" alt="tarjetas" id="tarjetas">
-                    
-                </div>
-                <div class="form-group" id="pay-now">
-                    <button type="submit" class="btn btn-default" id="confirm-purchase">Valida</button>
-                </div><div class="form-group" id="clear">
-                  <button type="submit" class="clear" id="clear-limpiar">Limpiar</button>
-              </div>
-
-            </form>
-        </div>
+        </section>
     </div>
-</section>
-    </header>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
