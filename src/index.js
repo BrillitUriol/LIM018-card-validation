@@ -1,36 +1,26 @@
 import validator from './validator.js';
 
- //var elemento = document.querySelector("#micampoid");
- //var elementoclass = document.querySelector(".micampoid");
+let resultado = document.getElementById("resultado");
+let cardNumber = document.getElementById("cardNumber");
+let buy = document.getElementById("buy");
+let card1 = document.getElementById("card1");
+let card2 = document.getElementById("card2");
+let validar = document.getElementById("confirm-purchase");
+validar.addEventListener('click', (e) => {
+    e.preventDefault();
+console.log(validator.isValid(cardNumber.value)); 
+//*resultado.innerText=validator.isValid(cardNumber.value)
+if(validator.isValid(cardNumber.value)){
+    resultado.innerHTML="Tu tarjeta es valida";
+} else {
+    resultado.innerHTML=`Tu tarjeta es inválida ${validator.maskify(cardNumber.value)}`;
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    var cardNumberField = document.getElementById("cardNumber"),
-    btnForm = document.getElementById("confirm-purchase"),
-    btnBuy = document.querySelector("#buy"),
-    screen1 = document.querySelector("#screen1"),
-    screen2 = document.querySelector("#screen2");
+});
+buy.addEventListener("click", function(){
+    card1.style.display = "none";
+    card2.style.display = "block";
+});
     
-    btnForm.addEventListener("click", (e) => {
-        e.preventDefault();
-       
-        cardNumberField.classList.remove("credit-card-error");
-        if(!validator.isValid(cardNumberField.value))
-        {
-            cardNumberField.classList.add("credit-card-error");
-        }
-    });
-    btnBuy.addEventListener("click", (e) => {
-        e.preventDefault();
 
-        screen2.classList.remove("ocultar");
-        screen1.classList.add("ocultar");
-
-    });
-    cardNumberField.addEventListener("keyup", (e) => {
-        e.preventDefault();          
-        cardNumberField.value = validator.maskify(cardNumberField.value);        
-    });
-
-})
 

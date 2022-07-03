@@ -1,40 +1,38 @@
 const validator = {
   isValid:function(creditCardNumber){
+if( creditCardNumber == ""){
+  throw new Error("no puede estar vacio")
+}
+    let array= creditCardNumber.split("");
+   let numReverse=array.reverse();
+   let arrayNumber=numReverse.map(Number);
+   let numero=0;
+   let suma=0;
+   let esPar=false;
+   for(let i=0;i<arrayNumber.length;i++){
+    numero = arrayNumber[i]
+    if(esPar){
+     numero=parseInt(numero * 2)
 
     
-    if (/[^0-9]+/.test(creditCardNumber))
-    {
-      //console.log("Solo ingrese digitos numericos");
-      return false;
-    } 
-  
-    // The Luhn Algorithm. It's so pretty.
-    var nCheck = 0, nDigit = 0, bEven = false,
-      value = creditCardNumber.replace(/\D/g, "");
-
-    for (var n = value.length - 1; n >= 0; n--) {
-        var cDigit = value.charAt(n);
-            nDigit = parseInt(cDigit, 10);
-
-        if (bEven) {
-            if ((nDigit *= 2) > 9) nDigit -= 9; // nDigit = nDigit - 9;
-        }
-
-        nCheck += nDigit; // nCheck = ncheck + nDigit;
-        bEven = !bEven;
     }
+    if(numero >= 10)
+     {numero= numero-9;
 
-    if((nCheck % 10) == 0)
-    {
-      //console.log("Numero de Tarjeta válido");
-      return true;
     }
-
-    //console.log("Numero de Tarjeta inválido");
-    return false;
+    suma=suma + numero;
+    //console.log(suma)
+    numero = 0;
+    esPar=!esPar;
+  }
+   
+    return  (suma % 10 === 0);
   },
+
+
+    
   maskify:function(creditCardNumber){
-    return creditCardNumber.replace(/.(?=.{4})/g, "#");
-},
+    return creditCardNumber.split('').map((valor, idx) => idx < creditCardNumber.length -4 ? "#" : valor).join('');
+  }
 }
 export default validator;
